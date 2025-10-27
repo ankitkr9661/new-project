@@ -104,7 +104,7 @@ app.get("/", (req, res) => {
 });
 
 // -------------------- Database & Server Setup --------------------
-const PORT = process.env.PORT || 5000; // ⚠️ Fixed incorrect variable name
+const PORT = process.env.DB_URL || 5000; // ⚠️ Fixed incorrect variable name
 
 const startServer = async () => {
   try {
