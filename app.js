@@ -104,14 +104,14 @@ app.get("/", (req, res) => {
 });
 
 // -------------------- Database & Server Setup --------------------
-const PORT = process.env.DB_URL || 5000; // ⚠️ Fixed incorrect variable name
+const PORT = process.env.PORT || 5000; // ✅ Correct variable
 
 const startServer = async () => {
   try {
     await sequelize.authenticate();
     console.log("✅ Database connection established successfully.");
 
-    await sequelize.sync({ alter: false }); // Keep false for production
+    await sequelize.sync({ alter: false });
     const userCount = await User.count();
     console.log(`👥 Total users in DB: ${userCount}`);
 
