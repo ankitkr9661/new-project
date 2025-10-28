@@ -162,7 +162,7 @@ import User from "./models/userModel.js";
 dotenv.config(); // Load environment variables from .env
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 // ========================================================
 // 🛡️ CORS Configuration (Local + Render Frontend)
